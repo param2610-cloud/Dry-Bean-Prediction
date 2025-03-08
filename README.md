@@ -54,10 +54,30 @@ pip install pandas numpy scikit-learn matplotlib seaborn openpyxl
 - No feature scaling
 - Standard regularization
 
-**Results:**
-- Simple baseline implementation
-- Establishes initial performance benchmark
-- Identifies areas for improvement
+## Results
+
+**Accuracy:** 0.6988615497612927
+
+### Classification Report
+
+| Class     | Precision | Recall | F1-Score | Support |
+|-----------|-----------|--------|----------|---------|
+| BARBUNYA | 0.67      | 0.52   | 0.59     | 265     |
+| BOMBAY   | 1.00      | 0.99   | 1.00     | 104     |
+| CALI     | 0.73      | 0.78   | 0.75     | 326     |
+| DERMASON | 0.81      | 0.87   | 0.84     | 709     |
+| HOROZ    | 0.60      | 0.55   | 0.58     | 386     |
+| SEKER    | 0.67      | 0.62   | 0.65     | 406     |
+| SIRA     | 0.56      | 0.61   | 0.59     | 527     |
+
+**Overall Accuracy:** 0.70 
+
+### Averages
+
+| Average Type | Precision | Recall | F1-Score |
+|--------------|-----------|--------|----------|
+| Macro Avg    | 0.72      | 0.71   | 0.71     |
+| Weighted Avg | 0.70      | 0.70   | 0.70     |
 
 ### Version 2: Tuned Logistic Regression with Feature Scaling
 **Improvements over Version 1:**
@@ -67,6 +87,30 @@ pip install pandas numpy scikit-learn matplotlib seaborn openpyxl
   - `C=0.5` (regularization strength)
   - `tol=0.001` (tolerance for stopping criteria)
   - `class_weight='balanced'` (handles class imbalance)
+### Updated Evaluation Metrics
+
+**Accuracy:** 0.9162688211531399
+
+#### Classification Report
+
+| Class     | Precision | Recall | F1-Score | Support |
+|-----------|-----------|--------|----------|---------|
+| BARBUNYA  | 0.94      | 0.90   | 0.92     | 265     |
+| BOMBAY    | 1.00      | 1.00   | 1.00     | 104     |
+| CALI      | 0.93      | 0.94   | 0.94     | 326     |
+| DERMASON  | 0.94      | 0.88   | 0.91     | 709     |
+| HOROZ     | 0.96      | 0.95   | 0.95     | 386     |
+| SEKER     | 0.92      | 0.95   | 0.94     | 406     |
+| SIRA      | 0.83      | 0.89   | 0.86     | 527     |
+
+**Overall Accuracy:** 0.92 
+
+#### Averages
+
+| Average Type | Precision | Recall | F1-Score |
+|--------------|-----------|--------|----------|
+| Macro Avg    | 0.93      | 0.93   | 0.93     |
+| Weighted Avg | 0.92      | 0.92   | 0.92     |
 
 **Key Benefits:**
 - Better convergence with scaled features
@@ -79,7 +123,30 @@ pip install pandas numpy scikit-learn matplotlib seaborn openpyxl
 - **Increased Iterations**: `max_iter=1000` for guaranteed convergence
 - **Feature Scaling**: Maintained StandardScaler preprocessing
 - **Optimized Parameters**: Fine-tuned for best performance
+### Updated Evaluation Metrics for Version 3
 
+**Accuracy:** 0.9214102093279471
+
+#### Classification Report
+
+| Class     | Precision | Recall | F1-Score | Support |
+|-----------|-----------|--------|----------|---------|
+| BARBUNYA  | 0.95      | 0.89   | 0.92     | 265     |
+| BOMBAY    | 1.00      | 1.00   | 1.00     | 104     |
+| CALI      | 0.93      | 0.94   | 0.94     | 326     |
+| DERMASON  | 0.92      | 0.91   | 0.92     | 709     |
+| HOROZ     | 0.96      | 0.95   | 0.96     | 386     |
+| SEKER     | 0.93      | 0.95   | 0.94     | 406     |
+| SIRA      | 0.85      | 0.88   | 0.86     | 527     |
+
+**Overall Accuracy:** 0.92
+
+#### Average Metrics
+
+| Average Type | Precision | Recall | F1-Score |
+|--------------|-----------|--------|----------|
+| Macro Avg    | 0.94      | 0.93   | 0.93     |
+| Weighted Avg | 0.92      | 0.92   | 0.92     |
 **Performance Highlights:**
 - Highest accuracy achieved
 - Best convergence properties
@@ -100,6 +167,9 @@ The project includes comprehensive data exploration:
 - **Feature Relationships**: Scatter plots of area vs perimeter, major vs minor axis
 - **Pairwise Analysis**: Feature correlation visualization
 - **Confusion Matrices**: Detailed classification performance for each model
+
+### Example Pair Plot
+![Pair Plot](Images/co-relation%20between%20features.png)
 
 ## Key Findings
 
