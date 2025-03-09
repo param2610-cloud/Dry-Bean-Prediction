@@ -1,5 +1,5 @@
 # Dry Bean Classification Project
-
+![Dry Bean Hero](Images/thumbnail.png "Dry Bean Classification Project")
 ## Overview
 
 This project implements a multiclass classification system to predict dry bean varieties using machine learning techniques. The system classifies beans into 7 different classes: Seker, Barbunya, Bombay, Cali, Dermason, Horoz, and Sira based on their physical characteristics.
